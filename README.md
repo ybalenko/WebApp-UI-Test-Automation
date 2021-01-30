@@ -5,7 +5,7 @@ This [repository](https://github.com/ybalenko/WebApp-UI-Test-Automation) contain
 In addition, I have also included some samples of using **Sauce Labs** [2] with a common Python test tool (Unittest, in particular).
 
 ## To run test samples
->   To run samples for some test scenarios you will need a configuration JSON file:
+>   To run some samples you will need a configuration JSON file (config.json):
 >   ```
 >   {
 >       "saucecreds": {
