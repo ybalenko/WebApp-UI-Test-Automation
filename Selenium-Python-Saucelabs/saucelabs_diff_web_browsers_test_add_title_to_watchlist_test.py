@@ -3,9 +3,14 @@ import time
 import unittest
 from selenium import webdriver
 
-# Scenario:
-# As a user, I want to add 'Skyfall' title to my Watchlist on https://www.imdb.com/
 
+# The test contains scripts and dependencies for running UI automated Selenium tests on Sauce Labs using Python and Unittest.
+# This test scenario is designed for a web app running against Windows 10 and the following browsers: Chrome, Edge, and Firefox.
+# The description and steps you may find below.
+
+# Description:
+# As a user, I want to add 'Skyfall' title to my Watchlist on https://www.imdb.com/
+# Steps:
 # 1. Go to http://www.imdb.com and sign in with a personal Google account
 # 2. Check that watchlist is empty (if not - raise an exception)
 # 3. Select dropdown All
@@ -42,7 +47,7 @@ class IMDbAddTitleToWatchlistTestCase(unittest.TestCase):
             'idleTimeout': 1000
         }
 
-        # we define browser and/or WebDriver capabilities such as
+        # Define browser and/or WebDriver capabilities such as
         # the browser name, browser version, platform name, platform version
         chromeOpts = {
             'platformName': 'Windows 10',
@@ -75,8 +80,6 @@ class IMDbAddTitleToWatchlistTestCase(unittest.TestCase):
                 command_executor='https://ondemand.saucelabs.com:443/wd/hub', desired_capabilities=c)
             testSignInTitleSearchAddToWatchlist(
                 self.imdbcreds['email'], self.imdbcreds['password'], browser)
-
-    # Test Case execution starts
 
 
 def testSignInTitleSearchAddToWatchlist(email, password, browser):
